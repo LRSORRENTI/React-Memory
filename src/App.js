@@ -78,6 +78,17 @@ console.log("Cards: ", cards, "Turns: ", turns )
     <div className='App'>
      <h1>Memory Match</h1>
      <button onClick={shuffleCards}>New Game</button>
+    
+    <div className='card-grid'>
+      {cards.map(card => (
+        <div className="card" key={card.id}> 
+            <div>
+                <img className='front' src={card.src} alt='card front' />
+                <img className='back' src='/images/svelte.png' alt='card-back' />
+             </div>
+         </div>
+      ))}
+    </div>
     </div>
   );
 };
