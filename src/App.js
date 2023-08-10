@@ -1,4 +1,5 @@
 
+import { useState } from 'react';
 import './App.css';
 
 const cardImages = [
@@ -12,6 +13,12 @@ const cardImages = [
 
 
 function App() {
+  // we also need some state, we have cards, 
+  // and setCards which we'll set to useState 
+  const [cards, setCards] = useState([])
+
+  const [turns, setTurns] = useState(0)
+
 
   // shuffle the cards 
   const shuffleCards = () => {
@@ -36,7 +43,7 @@ function App() {
     // if num > 0, then the pairing of numbers we want 
     // to swap 
       .sort(() => {   
-          Math.random() - 0.5;
+        return  Math.random() - 0.5;
       })
 
       // next we chain on the map method, which will 
@@ -51,17 +58,28 @@ function App() {
         // with Math.random 
 
         { ...card, id: Math.random()}
-        
-      ));
-  }
+
+      ))
+      setCards(shuffledCards)
+      // whenever this is called, it will update the cards 
+      // state to be shuffledCards
+
+      setTurns(0)
+      // the above is important, because everytime we 
+      // press      <button>New Game</button>
+      // we want the turns to go back to 0, everytime 
+      // we have a new game, turns should start at 0
+  };
+
+console.log("Cards: ", cards, "Turns: ", turns )
 
 
   return (
     <div className='App'>
      <h1>Memory Match</h1>
-     <button>New Game</button>
+     <button onClick={shuffleCards}>New Game</button>
     </div>
   );
-}
+};
 
 export default App;
