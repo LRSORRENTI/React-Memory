@@ -3,12 +3,12 @@ import { useState } from 'react';
 import './App.css';
 
 const cardImages = [
-  { "src": "/images/angular.png" },
-  { "src": "/images/django.png" },
-  { "src": "/images/laravel.png" },
-  { "src": "/images/react.png" },
-  { "src": "/images/rubyonrails.png" },
-  { "src": "/images/vue.png" },
+  { "src": "/images/arcanine_.jpg" },
+  { "src": "/images/dragonite_.jpg" },
+  { "src": "/images/gengar_.jpg" },
+  { "src": "/images/gyarados_.jpg" },
+  { "src": "/images/pidgeot_.jpg" },
+  { "src": "/images/venusaur_.jpg" },
 ];
 
 
@@ -84,7 +84,7 @@ console.log("Cards: ", cards, "Turns: ", turns )
         <div className="card" key={card.id}> 
             <div>
                 <img className='front' src={card.src} alt='card front' />
-                <img className='back' src='/images/svelte.png' alt='card-back' />
+                <img className='back' src='/images/Cardback_.jpg' alt='card-back' />
              </div>
          </div>
       ))}
