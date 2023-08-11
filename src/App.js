@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import SingleCard from './components/SingleCard';
 const cardImages = [
@@ -103,6 +103,47 @@ const handleChoice = (card) => {
     // will run, left of the colon
 
     choiceOne ? setChoiceTwo(card) : setChoiceOne(card)
+}
+
+// compare choices with useEffect hook, use effects, 
+// takes a function, and an array 
+
+// this will fire when a component mounts, then 
+// fire again a dependency in the array argument changed 
+
+
+useEffect(( ) => {
+  // so if the ternary inside handleChoice fires 
+  // setChoiceOne, the useEffect fires again, same 
+  // if setChoiceTwo fires in the ternary
+
+  // inside here we need to first check if we have 
+  // values for choiceOne and choiceTwo
+
+  if(choiceOne && choiceTwo){
+    // this comparison will only be true if neither 
+    // choiceOne and choiceTwo are null
+    if(choiceOne.src === choiceTwo.src){
+      console.log(`That's a match!`)
+      resetTurn()
+    }
+    else {
+      console.log(`Cards dont match`)
+      resetTurn()
+    }
+  }
+
+
+}, [choiceOne, choiceTwo])
+
+
+
+// reset choices, and increase turn count 
+
+const resetTurn = () => {
+  setChoiceOne(null)
+  setChoiceTwo(null)
+  setTurns(prevTurns => prevTurns + 1)
 }
 
   return (
