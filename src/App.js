@@ -20,6 +20,20 @@ function App() {
   const [turns, setTurns] = useState(0)
 
 
+  // We'll need more state to track choices the 
+  // user makes: 
+
+  const [choiceOne, setChoiceOne] = useState(null)
+  //so when a user clicks a card, we'll updtae 
+  // the above choiceOne to reflect that choice  
+
+  const [choiceTwo, setChoiceTwo] = useState(null)
+// Then when they click a second card we update 
+// choiceTwo, to reflect that choice 
+
+// Which means we need click events for each card 
+
+
   // shuffle the cards 
   const shuffleCards = () => {
 
