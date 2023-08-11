@@ -85,8 +85,25 @@ function App() {
       // we have a new game, turns should start at 0
   };
 
-console.log("Cards: ", cards, "Turns: ", turns )
+// console.log("Cards: ", cards, "Turns: ", turns )
 
+// Choice handler 
+
+const handleChoice = (card) => {
+    // console.log(card)
+
+    // below if choiceOne is null, after the ternary check ? 
+    // that means we don't uet have a selection for choiceOne
+
+    // Which will in turn run the code on the right side 
+    // of the colon: setChoicOne 
+
+    // but if choiceOne before the ? is not null, it 
+    // will return true, which means setChoiceTwo 
+    // will run, left of the colon
+
+    choiceOne ? setChoiceTwo(card) : setChoiceOne(card)
+}
 
   return (
     <div className='App'>
@@ -95,7 +112,11 @@ console.log("Cards: ", cards, "Turns: ", turns )
     
     <div className='card-grid'>
       {cards.map(card => (
-      <SingleCard key={card.id} card={card}/>
+      <SingleCard
+       key={card.id}
+       card={card}
+       handleChoice={handleChoice}
+       />
       ))}
     </div>
     </div>
