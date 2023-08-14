@@ -127,14 +127,33 @@ useEffect(( ) => {
     // this comparison will only be true if neither 
     // choiceOne and choiceTwo are null
     if(choiceOne.src === choiceTwo.src){
-      console.log(`That's a match!`)
+      // console.log(`That's a match!`)
+      // if the above returns true, we have a match
+      setCards(prevCards => {
+        // when above is true we use setCards to 
+        // update the state 
+
+        // inside here we'll check the cards for the 
+        // match, using map to iterate and return a new 
+        // array of cards, map takes the old array, prevCards. 
+        //and makes a new array 
+        return prevCards.map(card => {
+          if(card.src === choiceOne.src){
+            // so the above will always turn two of the 
+            // cards matched property to true if it's a match 
+            return {...card, matched: true}
+          } else {
+            return card
+          }
+        })
+      })
       resetTurn()
       // this is where we also want to update the 
       // matched property for a given card in the cards 
       // array above, intially they're all set to false 
     }
     else {
-      console.log(`Cards dont match`)
+      // console.log(`Cards dont match`)
       resetTurn()
     }
   }
@@ -142,7 +161,7 @@ useEffect(( ) => {
 
 }, [choiceOne, choiceTwo])
 
-
+console.log(cards)
 
 // reset choices, and increase turn count 
 
@@ -163,6 +182,7 @@ const resetTurn = () => {
        key={card.id}
        card={card}
        handleChoice={handleChoice}
+       flipped={card === choiceOne || card === choiceTwo || card.matched}
        />
       ))}
     </div>
