@@ -2,13 +2,16 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import SingleCard from './components/SingleCard';
+
+// below we have all the cards intially set with 
+// the matched value to false 
 const cardImages = [
-  { "src": "/images/arcanine_.jpg" },
-  { "src": "/images/dragonite_.jpg" },
-  { "src": "/images/gengar_.jpg" },
-  { "src": "/images/gyarados_.jpg" },
-  { "src": "/images/pidgeot_.jpg" },
-  { "src": "/images/venusaur_.jpg" },
+  { "src": "/images/arcanine_.jpg", matched: false},
+  { "src": "/images/dragonite_.jpg", matched: false},
+  { "src": "/images/gengar_.jpg", matched: false },
+  { "src": "/images/gyarados_.jpg", matched: false},
+  { "src": "/images/pidgeot_.jpg", matched: false},
+  { "src": "/images/venusaur_.jpg", matched: false},
 ];
 
 
@@ -126,6 +129,9 @@ useEffect(( ) => {
     if(choiceOne.src === choiceTwo.src){
       console.log(`That's a match!`)
       resetTurn()
+      // this is where we also want to update the 
+      // matched property for a given card in the cards 
+      // array above, intially they're all set to false 
     }
     else {
       console.log(`Cards dont match`)
