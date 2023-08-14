@@ -196,8 +196,8 @@ useEffect(() => {
 
   return (
     <div className='App'>
-     <h1>Memory Match</h1>
-     <button onClick={shuffleCards}>New Game</button>
+     <h1>Poké Match</h1>
+     <button className='btn' onClick={shuffleCards}>New Game</button>
     
     <div className='card-grid'>
       {cards.map(card => (
