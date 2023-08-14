@@ -154,7 +154,11 @@ useEffect(( ) => {
     }
     else {
       // console.log(`Cards dont match`)
-      resetTurn()
+      setTimeout( () =>  resetTurn(), 1000)
+      // the above setTimeout will ensure that 
+      // the cards that don't match don't snap 
+      // back to unflipped, it lets the cards 
+      // show for 1 second, then change back
     }
   }
 
