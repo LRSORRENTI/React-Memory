@@ -80,6 +80,8 @@ const [disabled, setDisabled] = useState(false)
         { ...card, id: Math.random()}
 
       ))
+      setChoiceOne(null)
+      setChoiceTwo(null)
       setCards(shuffledCards)
       // whenever this is called, it will update the cards 
       // state to be shuffledCards
@@ -184,6 +186,14 @@ const resetTurn = () => {
   setDisabled(false)
 }
 
+
+// Start new game immediately by calling this 
+// useEffect hook right when the page loads 
+
+useEffect(() => {
+  shuffleCards()
+}, [])
+
   return (
     <div className='App'>
      <h1>Memory Match</h1>
@@ -200,6 +210,7 @@ const resetTurn = () => {
        />
       ))}
     </div>
+    <p>Turns: {turns}</p>
     </div>
   );
 };
