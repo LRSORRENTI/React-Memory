@@ -36,6 +36,9 @@ function App() {
 
 // Which means we need click events for each card 
 
+// below we'll add state so that the user can't click 
+// extremely quickly, 
+const [disabled, setDisabled] = useState(false)
 
   // shuffle the cards 
   const shuffleCards = () => {
@@ -124,6 +127,11 @@ useEffect(( ) => {
   // values for choiceOne and choiceTwo
 
   if(choiceOne && choiceTwo){
+    // we set the disabled state to true, once 
+    // a choice is made 
+    setDisabled(true)
+
+
     // this comparison will only be true if neither 
     // choiceOne and choiceTwo are null
     if(choiceOne.src === choiceTwo.src){
@@ -173,6 +181,7 @@ const resetTurn = () => {
   setChoiceOne(null)
   setChoiceTwo(null)
   setTurns(prevTurns => prevTurns + 1)
+  setDisabled(false)
 }
 
   return (
@@ -187,6 +196,7 @@ const resetTurn = () => {
        card={card}
        handleChoice={handleChoice}
        flipped={card === choiceOne || card === choiceTwo || card.matched}
+       disabled={disabled}
        />
       ))}
     </div>
