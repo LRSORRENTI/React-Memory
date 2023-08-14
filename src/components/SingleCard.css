@@ -8,3 +8,16 @@
   border: 2px solid #eeee;
   border-radius: 6px;
 }
+
+.card .front {
+  position: absolute;
+  /* We set the postion to be absolute, so it sits 
+  directly on top of the card */
+  transform: rotateY(90deg);
+}
+
+.flipped .front {
+  /* When the flipped class is active, we show the front 
+  of the card and the card back is hidden */
+  transform: rotateY(0deg);
+}
