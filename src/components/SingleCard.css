@@ -8,16 +8,29 @@
   border: 2px solid #eeee;
   border-radius: 6px;
 }
-
+/* Front of card */
 .card .front {
   position: absolute;
   /* We set the postion to be absolute, so it sits 
   directly on top of the card */
   transform: rotateY(90deg);
+  transition: all ease-in 0.2s;
 }
 
 .flipped .front {
   /* When the flipped class is active, we show the front 
   of the card and the card back is hidden */
   transform: rotateY(0deg);
+  transition-delay: 0.2s;
+}
+/* Back of Card */
+
+.card .back {
+  transition: all ease-in 0.2s;
+  transition-delay: 0.2s;
+}
+
+.flipped .back {
+  transform: rotateY(90deg);
+  transition-delay: 0s;
 }
