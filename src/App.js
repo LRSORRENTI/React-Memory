@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import SingleCard from './components/SingleCard';
+import PokeBall from './components/PokeBall'
 
 // below we have all the cards intially set with 
 // the matched value to false 
@@ -196,6 +197,7 @@ useEffect(() => {
 
   return (
     <div className='App'>
+      <PokeBall />
      <h3>Poké Match</h3>
      <button className='btn' onClick={shuffleCards}>New Game</button>
     
