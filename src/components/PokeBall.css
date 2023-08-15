@@ -5,14 +5,43 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+/*
 body {
-  background: #ecf0f1;
+   background: #dbdbdb;
+  background-image: url("/public/images/Kanto_Map.png");
+  margin: 0; 
+  padding: 0;
+}
+
+*/
+
+/* body {
+  background-image: url("/public/images/Kanto_Map.png");
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center; 
+  filter: brightness(1);
+  margin: 0; 
+  padding: 0; 
+  max-width: 1200px;
+  margin: 0 auto;
+} */
+
+body {
+  /* background: #dbdbdb; */
+  background-image: url("/public/images/Kanto_Map2.png");
+  background-size: auto; /* Set initial background size to auto */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-position: center; /* Center the background image horizontally and vertically */
+  filter: brightness(1); /* Adjust the brightness (0 to 1) */
   margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
+  /* max-width: 1500px; */
+  margin: 0 auto;
 }
 
 h1 {
-  color: white;
+  color: transparent;
 }
 /* .center-on-page {
   position: absolute;
@@ -50,8 +79,9 @@ h1 {
 }
 .pokeball::before {
   top: calc(50% - 5px);
-  left: -5px; /* Adjust left positioning for the left black bar */
+  left: -5px;
 }
+
 .pokeball::after {
   top: calc(50% - 5px);
   right: -5px; /* Adjust right positioning for the right black bar */
