@@ -197,9 +197,10 @@ useEffect(() => {
 
   return (
     <div className='App'>
-      <PokeBall />
-     <h3>Poké Match</h3>
-     <button className='btn' onClick={shuffleCards}>New Game</button>
+      <PokeBall onClick={shuffleCards}/>
+     <h3 id="pokematch">Poké Match</h3>
+     <p>Match Cards, Click Poké Ball To Reset</p>
+     {/* <button className='btn' onClick={shuffleCards}>New Game</button> */}
     
     <div className='card-grid'>
       {cards.map(card => (

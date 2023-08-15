@@ -2,7 +2,12 @@
   max-width: 860px;
   margin: 40px auto;
 }
-
+#pokematch {
+  color: transparent;
+}
+#pokematch:hover {
+  cursor: default;
+}
 button {
   background: none;
   border: 2px solid white;
