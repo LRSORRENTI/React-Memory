@@ -196,7 +196,7 @@ useEffect(() => {
 
   return (
     <div className='App'>
-     <h1>Poké Match</h1>
+     <h3>Poké Match</h3>
      <button className='btn' onClick={shuffleCards}>New Game</button>
     
     <div className='card-grid'>
