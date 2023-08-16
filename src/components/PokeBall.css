@@ -86,7 +86,7 @@ h1 {
   position: absolute;
   width: calc(
     50% + 5px
-  ); /* Extend width to cover the black bars on both sides */
+  ); /*Extend width to cover the black bars on both sides */
   height: 10px;
   background: #000;
 }
@@ -99,6 +99,7 @@ h1 {
   top: calc(50% - 5px);
   right: -5px; /* Adjust right positioning for the right black bar */
 }
+
 .pokeball__red-top {
   position: absolute;
   top: 0;
