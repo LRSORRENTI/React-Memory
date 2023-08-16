@@ -1,5 +1,7 @@
 # Poké Match Game
 
+![Project Image](/public/images/pokeMatchCopy.jpg)
+
 Poké Match is a memory matching game that challenges players to match pairs of Pokémon cards. Test your memory and concentration as you flip over cards to find matching pairs. Each successful match brings you closer to becoming the ultimate Pokémon master!
 
 ## Gameplay
