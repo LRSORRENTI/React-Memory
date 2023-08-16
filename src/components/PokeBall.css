@@ -59,7 +59,7 @@ h1 {
 
 #cantmove {
   margin-bottom: 10px;
-  margin-top: 32px;
+  margin-top: -25px;
 }
 /* .center-on-page {
   position: absolute;
@@ -80,6 +80,7 @@ h1 {
   border-radius: 50%;
   overflow: hidden;
   box-shadow: inset -5px 5px 0 5px #ccc;
+  margin-top: -8px;
 }
 
 .pokeball:hover {
