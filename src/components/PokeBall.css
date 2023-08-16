@@ -56,6 +56,11 @@ body {
 h1 {
   color: transparent;
 }
+
+#cantmove {
+  margin-bottom: 10px;
+  margin-top: 32px;
+}
 /* .center-on-page {
   position: absolute;
   top: 50%;

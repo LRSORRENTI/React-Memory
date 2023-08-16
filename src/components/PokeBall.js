@@ -26,7 +26,7 @@ export default function PokeBall({ onClick }) { // Accept onClick as a prop
         <div className="pokeball__red-top"></div>
         <div className="pokeball__button"></div>
       </div>
-      <h1>Hello</h1>
+      <h1 id='cantmove'>Hello</h1>
     </div>
   );
 }
