@@ -200,6 +200,7 @@ useEffect(() => {
     <div className='App'>
       <PokeBall onClick={shuffleCards}/>
      <h3 id="pokematch">Poké Match</h3>
+     <p className='press'>Press PokéBall To Reset | Turn {turns}</p>
      {/* <p>Match Cards, Click Poké Ball To Reset</p> */}
      {/* <button className='btn' onClick={shuffleCards}>New Game</button> */}
     
