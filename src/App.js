@@ -196,10 +196,11 @@ useEffect(() => {
 }, [])
 
   return (
+    
     <div className='App'>
       <PokeBall onClick={shuffleCards}/>
      <h3 id="pokematch">Poké Match</h3>
-     <p>Match Cards, Click Poké Ball To Reset</p>
+     {/* <p>Match Cards, Click Poké Ball To Reset</p> */}
      {/* <button className='btn' onClick={shuffleCards}>New Game</button> */}
     
     <div className='card-grid'>
@@ -213,7 +214,7 @@ useEffect(() => {
        />
       ))}
     </div>
-    <p>Turns: {turns}</p>
+    {/* <p>Turns: {turns}</p> */}
     </div>
   );
 };
