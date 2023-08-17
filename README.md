@@ -47,6 +47,6 @@ Poké Match is a memory matching game that challenges players to match pairs of 
 
 ## About the Developer
 
-Poké Match was created by as a personal project to practice React development and showcase programming skills.
+Poké Match was created as a personal project to practice React development and showcase programming skills.
 
 Feel free to explore the code and have fun playing the game!
