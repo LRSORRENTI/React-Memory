@@ -44,7 +44,6 @@ body {
 body {
   background-image: url("/public/images/Kanto_Map2.png");
   background-size: cover;
-
   background-repeat: no-repeat;
   background-position: center;
   filter: brightness(1);
@@ -58,8 +57,8 @@ h1 {
 }
 
 #cantmove {
-  margin-bottom: 10px;
-  margin-top: -25px;
+  /* margin-bottom: 10px;
+  margin-top: -25px; */
 }
 /* .center-on-page {
   position: absolute;
