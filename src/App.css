@@ -1,6 +1,6 @@
 .App {
   max-width: 500px;
-  margin: 20px auto;
+  margin: 90px auto;
   min-height: 660px;
 }
 #pokematch {
@@ -62,3 +62,4 @@ button:hover {
   grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr;
   grid-gap: 20px;
 }
+

@@ -82,7 +82,9 @@ function App() {
     if (allCardsMatched) {
       setGameWon(true);
     }
-  }, [choiceOne, choiceTwo]);
+  }, [choiceOne, choiceTwo, cards]
+  
+  );
 
   const resetTurn = () => {
     setChoiceOne(null);
