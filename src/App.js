@@ -101,7 +101,7 @@ function App() {
     <div className='App'>
       <PokeBall onClick={shuffleCards}/>
       <h3 id="pokematch">Poké Match</h3>
-      <p className='press'>{gameWon ? "Winner Winner Chicken Dinner!" : "Press PokéBall To Reset"} | Turn {turns}</p>
+      <p className='press'>{gameWon ? "Congratulations you won!!" : "Press PokéBall To Reset"} | Turn {turns}</p>
       <div className='card-grid'>
         {cards.map(card => (
           <SingleCard
